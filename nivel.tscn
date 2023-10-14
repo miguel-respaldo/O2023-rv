@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwl7trsu77e5o"]
+[gd_scene load_steps=11 format=3 uid="uid://dwl7trsu77e5o"]
 
 [ext_resource type="PackedScene" uid="uid://cst5d851bhy3m" path="res://jugador.tscn" id="1_75ii0"]
 
@@ -26,6 +26,12 @@ size = Vector2(10, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_05wql"]
 data = PackedVector3Array(5, -0.5, 0, -5, -0.5, 0, 5, 0.5, 0, -5, -0.5, 0, -5, 0.5, 0, 5, 0.5, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vsorm"]
+size = Vector3(5, 1, 0.2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_adyyq"]
+data = PackedVector3Array(-2.5, 0.5, 0.1, 2.5, 0.5, 0.1, -2.5, -0.5, 0.1, 2.5, 0.5, 0.1, 2.5, -0.5, 0.1, -2.5, -0.5, 0.1, 2.5, 0.5, -0.1, -2.5, 0.5, -0.1, 2.5, -0.5, -0.1, -2.5, 0.5, -0.1, -2.5, -0.5, -0.1, 2.5, -0.5, -0.1, 2.5, 0.5, 0.1, 2.5, 0.5, -0.1, 2.5, -0.5, 0.1, 2.5, 0.5, -0.1, 2.5, -0.5, -0.1, 2.5, -0.5, 0.1, -2.5, 0.5, -0.1, -2.5, 0.5, 0.1, -2.5, -0.5, -0.1, -2.5, 0.5, 0.1, -2.5, -0.5, 0.1, -2.5, -0.5, -0.1, 2.5, 0.5, 0.1, -2.5, 0.5, 0.1, 2.5, 0.5, -0.1, -2.5, 0.5, 0.1, -2.5, 0.5, -0.1, 2.5, 0.5, -0.1, -2.5, -0.5, 0.1, 2.5, -0.5, 0.1, -2.5, -0.5, -0.1, 2.5, -0.5, 0.1, 2.5, -0.5, -0.1, -2.5, -0.5, -0.1)
 
 [node name="escena" type="Node3D"]
 
@@ -83,3 +89,12 @@ mesh = SubResource("QuadMesh_bpgfy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pared4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_05wql")
+
+[node name="paredCubo1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 0)
+mesh = SubResource("BoxMesh_vsorm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredCubo1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredCubo1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_adyyq")
