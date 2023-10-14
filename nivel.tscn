@@ -74,3 +74,12 @@ mesh = SubResource("QuadMesh_bpgfy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pared3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_05wql")
+
+[node name="pared4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0.5, 0)
+mesh = SubResource("QuadMesh_bpgfy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pared4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pared4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_05wql")
