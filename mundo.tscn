@@ -25,11 +25,11 @@ size = Vector3(16, 1, 16)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.101, 0.5, 4.897)
 operation = 2
 radius = 2.0
-height = 1.0
+height = 1.1
 sides = 14
 
 [node name="hoyo2" type="CSGBox3D" parent="Combinador"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05516, 0.5, -4.51089)
+transform = Transform3D(0.438371, 0, 0.898794, 0, 1, 0, -0.898794, 0, 0.438371, 3, 0.5, -2)
 operation = 2
 size = Vector3(2, 1, 2)
 
@@ -37,3 +37,7 @@ size = Vector3(2, 1, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94484, 0.5, -4.30798)
 operation = 2
 size = Vector3(3, 1, 3)
+
+[node name="rampa" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.438371, 0, 0.898794, 0, 1, 0, -0.898794, 0, 0.438371, 4.24618, 1, -3.19605)
+polygon = PackedVector2Array(0, 0, -1.07932, 1.96981, 1.39351, 0.697236, 3.46984, -0.00411797)
