@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bgx10jw5b6ac8"]
+
+[node name="mundo" type="Node3D"]
+
+[node name="sol" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 10, 0)
