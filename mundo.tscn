@@ -5,6 +5,13 @@
 [node name="sol" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 10, 0)
 
-[node name="plataforma" type="CSGBox3D" parent="."]
+[node name="Combinador" type="CSGCombiner3D" parent="."]
+
+[node name="plataforma" type="CSGBox3D" parent="Combinador"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 size = Vector3(16, 1, 16)
+
+[node name="cilindro" type="CSGCylinder3D" parent="Combinador"]
+transform = Transform3D(1, 0, 0, 0, 0.999831, -0.0183598, 0, 0.0183598, 0.999831, 5.10146, 0.436291, 4.89697)
+radius = 1.0
+height = 3.12227
