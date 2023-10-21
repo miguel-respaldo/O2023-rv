@@ -1,5 +1,3 @@
-# Ejemplos de la clase de Realidad Virtual
+# Segundo ejemplo de una plataforma con hoyos
 
-Para organizar este repo, se hizo que en cada branch sea un nuevo proyecto de
-Godot.
 
