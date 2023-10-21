@@ -13,5 +13,6 @@ size = Vector3(16, 1, 16)
 
 [node name="cilindro" type="CSGCylinder3D" parent="Combinador"]
 transform = Transform3D(1, 0, 0, 0, 0.999831, -0.0183598, 0, 0.0183598, 0.999831, 5.10146, 0.436291, 4.89697)
+operation = 2
 radius = 1.0
 height = 3.12227
