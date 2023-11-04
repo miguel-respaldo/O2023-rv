@@ -1,4 +1,22 @@
-[gd_scene format=3 uid="uid://bgx10jw5b6ac8"]
+[gd_scene load_steps=7 format=3 uid="uid://bgx10jw5b6ac8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg6lj"]
+albedo_color = Color(0, 0.196078, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mbmi"]
+albedo_color = Color(0, 0.784314, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_on8dc"]
+albedo_color = Color(0, 0.392157, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqlaa"]
+albedo_color = Color(0.117647, 0.564706, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qo4gj"]
+albedo_color = Color(0.627451, 0.321569, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erpeq"]
+albedo_color = Color(0.686275, 0.686275, 0, 1)
 
 [node name="mundo" type="Node3D"]
 
@@ -8,18 +26,21 @@ transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 
 [node name="isla2" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94484, 0.5, -4.30798)
 height = 1.0
+material = SubResource("StandardMaterial3D_rg6lj")
 
 [node name="isla1" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.101, 0.5, 4.897)
 radius = 1.0
 height = 1.0
 sides = 14
+material = SubResource("StandardMaterial3D_8mbmi")
 
 [node name="Combinador1" type="CSGCombiner3D" parent="."]
 
 [node name="plataforma" type="CSGBox3D" parent="Combinador1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 size = Vector3(16, 1, 16)
+material = SubResource("StandardMaterial3D_on8dc")
 
 [node name="hoyo1" type="CSGCylinder3D" parent="Combinador1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.101, 0.5, 4.897)
@@ -41,10 +62,12 @@ size = Vector3(3, 1, 3)
 [node name="rampa1" type="CSGPolygon3D" parent="."]
 transform = Transform3D(0.438371, 0, 0.898794, 0, 1, 0, -0.898794, 0, 0.438371, 4.24618, 1, -3.19605)
 polygon = PackedVector2Array(0, 0, -1.07932, 1.96981, 1.39351, 0.697236, 3.46984, -0.00411797)
+material = SubResource("StandardMaterial3D_rqlaa")
 
 [node name="rampa2" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34725, 1, 5.43639)
 polygon = PackedVector2Array(-4.72491, 0.0319571, -1.63731, 1.29887, 2.14504, 2.27037, -1.20293, 0.0290418)
+material = SubResource("StandardMaterial3D_qo4gj")
 
 [node name="Combinador2" type="CSGCombiner3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -4.5, 1, 1)
@@ -52,6 +75,7 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -4.5, 
 [node name="rampa3" type="CSGPolygon3D" parent="Combinador2"]
 transform = Transform3D(1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 0, 0.5, -1)
 polygon = PackedVector2Array(-2.64793, -0.107403, -0.877404, 1.38998, 3.48293, 2.42434, 2.97573, -0.0609908)
+material = SubResource("StandardMaterial3D_erpeq")
 
 [node name="tunel1" type="CSGCylinder3D" parent="Combinador2"]
 operation = 2
