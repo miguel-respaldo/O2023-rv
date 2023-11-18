@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy45enlvfvy7n"]
+[gd_scene load_steps=6 format=3 uid="uid://dy45enlvfvy7n"]
 
 [ext_resource type="Texture2D" uid="uid://bt1xowmclwwah" path="res://imagenes/panorama1.jpg" id="1_6ppkm"]
+[ext_resource type="PackedScene" uid="uid://csmfi8xa21s63" path="res://recursos/Warrok W Kurniawan.dae" id="2_bxy0i"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_o7knr"]
 panorama = ExtResource("1_6ppkm")
@@ -19,7 +20,11 @@ environment = SubResource("Environment_brm4o")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 5, 0)
+light_color = Color(1, 1, 0, 1)
 
 [node name="plataforma" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 size = Vector3(20, 0.5, 20)
+
+[node name="Warrok W Kurniawan" parent="." instance=ExtResource("2_bxy0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.6, 2)
